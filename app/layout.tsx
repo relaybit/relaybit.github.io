@@ -13,12 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL || 'https://leonid-automation-portfolio.gsvlona.chatgpt.site'),
+  metadataBase: new URL(process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site'),
   title: 'RELAYBIT — автоматизация и цифровые решения',
-  description: 'Telegram-боты, парсеры и цифровые системы, которые освобождают бизнес от ручной работы.',
+  description: 'Разработка Telegram-ботов, парсеров, AI-инструментов и автоматизации для бизнеса. Реальные кейсы и быстрый запуск рабочих решений.',
+  keywords: ['автоматизация бизнеса', 'разработка Telegram-ботов', 'Telegram-бот на заказ', 'парсер данных', 'AI-автоматизация', 'интеграция API', 'разработка на Python', 'RELAYBIT'],
+  authors: [{ name: 'Гусев Леонид' }],
+  creator: 'Гусев Леонид',
+  category: 'Разработка программного обеспечения',
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'RELAYBIT — автоматизация без рутины',
-    description: 'Telegram-боты · Парсеры · Интеграции',
+    description: 'Telegram-боты, парсеры, AI-инструменты и интеграции для бизнеса.',
+    url: '/',
+    siteName: 'RELAYBIT',
+    locale: 'ru_RU',
+    type: 'website',
     images: ['/og.png'],
   },
   twitter: {
@@ -39,6 +49,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'RELAYBIT',
+          url: 'https://relaybit.gsvlona.chatgpt.site',
+          description: 'Автоматизация бизнеса, Telegram-боты, парсеры и AI-инструменты.',
+          author: { '@type': 'Person', name: 'Гусев Леонид' },
+        })}} />
         {children}
       </body>
     </html>

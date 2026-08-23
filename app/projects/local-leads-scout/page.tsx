@@ -5,6 +5,7 @@ import SiteFooter from '../../components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Local Leads Scout — кейс RELAYBIT',
   description: 'Telegram-инструмент, который находит небольшие тематические сообщества, фильтрует результаты и сохраняет их в базу.',
+  alternates: { canonical: '/projects/local-leads-scout' },
   openGraph: { images: [] },
   twitter: { images: [] },
 };

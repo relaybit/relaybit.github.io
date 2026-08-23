@@ -5,6 +5,7 @@ import SiteFooter from '../../components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Игровой Telegram-бот — кейс RELAYBIT',
   description: 'Архивный прототип Telegram-бота с мини-играми, внутренней валютой, рейтингом, бонусами и настройками приватности.',
+  alternates: { canonical: '/projects/telegram-game-bot' },
   openGraph: { images: [] },
   twitter: { images: [] },
 };

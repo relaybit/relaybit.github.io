@@ -5,6 +5,7 @@ import SiteFooter from '../../components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Lead Hunter v0.6.0 — кейс RELAYBIT',
   description: 'Windows-приложение для сбора, AI-оценки и доставки подходящих заявок из нескольких источников.',
+  alternates: { canonical: '/projects/lead-hunter' },
   openGraph: { images: [] },
   twitter: { images: [] },
 };
