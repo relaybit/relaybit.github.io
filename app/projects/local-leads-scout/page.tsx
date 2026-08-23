@@ -17,7 +17,7 @@ export default function LocalLeadsScoutPage() {
       <div className="case-kicker"><span>Кейс 01</span><b><i /> Рабочий прототип</b></div>
       <h1>Local Leads<br/><em>Scout.</em></h1>
       <p>Инструмент для поиска небольших публичных Telegram-сообществ: собирает открытые данные, отсеивает нерелевантные результаты и присылает подходящие варианты администратору.</p>
-      <div className="case-actions"><a className="button primary" href="https://t.me/leonid_relaybit" target="_blank" rel="noreferrer">Обсудить похожую задачу <span>→</span></a><a className="button ghost" href="/projects">Все проекты</a></div>
+      <div className="case-actions"><a className="button primary" href="https://t.me/leonid_relaybit" target="_blank" rel="noreferrer">Обсудить похожую задачу <span>→</span></a><a className="button ghost" href="https://github.com/relaybit/local-leads-scout" target="_blank" rel="noreferrer">Исходный код ↗</a><a className="button ghost" href="/projects">Все проекты</a></div>
     </section>
 
     <section className="case-metrics shell" aria-label="Показатели проекта">
