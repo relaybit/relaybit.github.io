@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import Script from 'next/script';
+import AnalyticsConsent from './components/AnalyticsConsent';
 import './globals.css';
 
 const siteUrl = process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site';
@@ -51,6 +53,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script id="ga-consent-default" strategy="beforeInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('consent', 'default', { analytics_storage: 'denied' });
+          try { if (localStorage.getItem('relaybit-analytics-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (_) {}
+        `}</Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-9KWMSZYJDT" strategy="afterInteractive" />
+        <Script id="ga-config" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-9KWMSZYJDT', { anonymize_ip: true });
+        `}</Script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
@@ -60,6 +75,7 @@ export default function RootLayout({
           author: { '@type': 'Person', name: 'Гусев Леонид' },
         })}} />
         {children}
+        <AnalyticsConsent />
       </body>
     </html>
   );
