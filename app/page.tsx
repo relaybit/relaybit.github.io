@@ -1,5 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
+import SiteHeader from './components/SiteHeader';
+import SiteFooter from './components/SiteFooter';
 
 const projects = [
   { no:'01', type:'LIVE · TELEGRAM', title:'Local Leads Scout', text:'Находит небольшие тематические сообщества, оценивает размер и присылает лучшие варианты в Telegram.', tags:['Telethon','Python','SQLite'], tone:'acid' },
@@ -17,10 +19,7 @@ export default function Home() {
     return () => window.clearInterval(timer);
   }, []);
   return <main>
-    <nav className="nav shell">
-      <a className="brand" href="#top"><span className="brand-mark">N</span><span>NORTHLINE</span></a>
-      <div className="nav-links"><a href="#work">Работы</a><a href="#services">Услуги</a><a className="nav-cta" href="#contact">Обсудить задачу</a></div>
-    </nav>
+    <SiteHeader />
     <section className="hero shell" id="top">
       <div className="hero-copy">
         <div className="eyebrow"><i /> Доступен для небольших проектов</div>
@@ -70,6 +69,6 @@ export default function Home() {
     <section className="process shell"><header><span>03 / Процесс</span><h2>От сообщения<br/>до запуска — <em>просто.</em></h2></header><ol><li><b>01</b><div><strong>Разбираемся</strong><p>Вы описываете задачу обычными словами. Я задаю вопросы и предлагаю решение.</p></div></li><li><b>02</b><div><strong>Показываю прототип</strong><p>За 1–3 дня появляется первая рабочая версия, которую уже можно проверить.</p></div></li><li><b>03</b><div><strong>Запускаем</strong><p>Дорабатываю детали, передаю результат и остаюсь на связи после запуска.</p></div></li></ol></section>
 
     <section className="contact shell" id="contact"><div className="contact-orb">↗</div><span>Есть задача?</span><h2>Давайте уберём<br/><em>ручную работу.</em></h2><p>Опишите, что приходится повторять каждый день. Я бесплатно скажу, можно ли это автоматизировать, и назову срок.</p><button onClick={async()=>{await navigator.clipboard.writeText('Привет! Хочу обсудить небольшую задачу по автоматизации.');setCopied(true);window.setTimeout(()=>setCopied(false),1800)}}>{copied?'Текст скопирован ✓':'Скопировать начало сообщения'}</button></section>
-    <footer className="footer shell"><a className="brand" href="#top"><span className="brand-mark">N</span><span>NORTHLINE</span></a><p>Студия автоматизации и цифровых решений.</p><a href="#top">Наверх ↑</a></footer>
+    <SiteFooter />
   </main>;
 }
