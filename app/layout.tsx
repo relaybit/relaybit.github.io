@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   keywords: ['автоматизация бизнеса', 'разработка Telegram-ботов', 'Telegram-бот на заказ', 'парсер данных', 'AI-автоматизация', 'интеграция API', 'разработка на Python', 'RELAYBIT'],
   authors: [{ name: 'Гусев Леонид' }],
   creator: 'Гусев Леонид',
+  verification: {
+    google: 'siQKNA0-mX2IT23iC4dqQAWlxCu1w3ACr-OeUWW5QAE',
+  },
   category: 'Разработка программного обеспечения',
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
