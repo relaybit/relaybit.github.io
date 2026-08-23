@@ -1,0 +1,5 @@
+Contact: mailto:relaybit@gmail.com
+Contact: https://t.me/leonid_relaybit
+Expires: 2027-08-23T00:00:00.000Z
+Preferred-Languages: ru, en
+Canonical: https://relaybit.gsvlona.chatgpt.site/.well-known/security.txt
