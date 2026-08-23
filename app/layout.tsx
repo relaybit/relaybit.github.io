@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   creator: 'Гусев Леонид',
   verification: {
     google: 'siQKNA0-mX2IT23iC4dqQAWlxCu1w3ACr-OeUWW5QAE',
+    yandex: '856edd8f88a32774',
   },
   category: 'Разработка программного обеспечения',
   alternates: { canonical: '/' },
