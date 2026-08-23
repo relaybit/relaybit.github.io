@@ -60,6 +60,7 @@ export default function RootLayout({
         <Script id="ga-consent-default" strategy="beforeInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
           gtag('consent', 'default', { analytics_storage: 'denied' });
           try { if (localStorage.getItem('relaybit-analytics-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (_) {}
         `}</Script>
@@ -67,6 +68,7 @@ export default function RootLayout({
         <Script id="ga-config" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
           gtag('js', new Date());
           gtag('config', 'G-9KWMSZYJDT', { anonymize_ip: true });
         `}</Script>
