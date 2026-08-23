@@ -1,1 +1,1 @@
-export default function SiteFooter(){return <footer className="footer shell"><a className="brand" href="/"><span className="brand-mark">N</span><span>NORTHLINE</span></a><p>Студия автоматизации и цифровых решений.</p><a href="/">На главную ↑</a></footer>}
+export default function SiteFooter(){return <footer className="footer shell"><a className="brand" href="/"><span className="brand-mark">R</span><span>RELAYBIT</span></a><p>Автоматизация и цифровые решения.</p><a href="/">На главную ↑</a></footer>}

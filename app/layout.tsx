@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL || 'https://leonid-automation-portfolio.gsvlona.chatgpt.site'),
-  title: 'NORTHLINE — студия автоматизации',
+  title: 'RELAYBIT — автоматизация и цифровые решения',
   description: 'Telegram-боты, парсеры и цифровые системы, которые освобождают бизнес от ручной работы.',
   openGraph: {
-    title: 'NORTHLINE — автоматизация без рутины',
+    title: 'RELAYBIT — автоматизация без рутины',
     description: 'Telegram-боты · Парсеры · Интеграции',
     images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NORTHLINE — автоматизация без рутины',
+    title: 'RELAYBIT — автоматизация без рутины',
     description: 'Telegram-боты · Парсеры · Интеграции',
     images: ['/og.png'],
   },

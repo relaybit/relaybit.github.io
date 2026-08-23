@@ -1,2 +1,2 @@
 import ThemeToggle from './ThemeToggle';
-export default function SiteHeader(){return <nav className="nav shell"><a className="brand" href="/"><span className="brand-mark">N</span><span>NORTHLINE</span></a><div className="nav-links"><a href="/projects">Проекты</a><a href="/services">Услуги</a><a href="/about">О студии</a><ThemeToggle/><a className="nav-cta" href="/#contact">Обсудить задачу</a></div></nav>}
+export default function SiteHeader(){return <nav className="nav shell"><a className="brand" href="/"><span className="brand-mark">R</span><span>RELAYBIT</span></a><div className="nav-links"><a href="/projects">Проекты</a><a href="/services">Услуги</a><a href="/about">О студии</a><ThemeToggle/><a className="nav-cta" href="/#contact">Обсудить задачу</a></div></nav>}
