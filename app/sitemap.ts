@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 
-const baseUrl = 'https://relaybit.gsvlona.chatgpt.site';
+export const dynamic = 'force-static';
+
+const baseUrl = process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ['', '/projects', '/projects/local-leads-scout', '/projects/telegram-game-bot', '/projects/lead-hunter', '/services', '/about'];

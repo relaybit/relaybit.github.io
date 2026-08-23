@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
+const siteUrl = process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -13,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site'),
+  metadataBase: new URL(siteUrl),
   title: 'RELAYBIT — автоматизация и цифровые решения',
   description: 'Разработка Telegram-ботов, парсеров, AI-инструментов и автоматизации для бизнеса. Реальные кейсы и быстрый запуск рабочих решений.',
   keywords: ['автоматизация бизнеса', 'разработка Telegram-ботов', 'Telegram-бот на заказ', 'парсер данных', 'AI-автоматизация', 'интеграция API', 'разработка на Python', 'RELAYBIT'],
@@ -53,7 +55,7 @@ export default function RootLayout({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'RELAYBIT',
-          url: 'https://relaybit.gsvlona.chatgpt.site',
+          url: siteUrl,
           description: 'Автоматизация бизнеса, Telegram-боты, парсеры и AI-инструменты.',
           author: { '@type': 'Person', name: 'Гусев Леонид' },
         })}} />
