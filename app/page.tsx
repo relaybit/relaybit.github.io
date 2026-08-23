@@ -5,7 +5,7 @@ import SiteFooter from './components/SiteFooter';
 
 const projects = [
   { no:'01', type:'В РАЗРАБОТКЕ · TELEGRAM', title:'Local Leads Scout', text:'Находит небольшие тематические сообщества, оценивает размер и присылает лучшие варианты в Telegram.', tags:['Telethon','Python','SQLite'], tone:'acid' },
-  { no:'02', type:'LAB · DATA', title:'Price Pulse', text:'Собирает цены конкурентов, складывает историю в таблицу и сообщает о важных изменениях.', tags:['Parsing','Sheets API','Alerts'], tone:'dark' },
+  { no:'02', type:'АРХИВ · TELEGRAM', title:'Игровой Telegram-бот', text:'Объединяет мини-игры, внутреннюю валюту, рейтинг, ежедневные бонусы и настройки приватности.', tags:['Python','Telegram Bot','Game UX'], tone:'dark' },
   { no:'03', type:'LAB · AUTOMATION', title:'Booking Flow', text:'Мини-бот для записи клиентов: услуги, свободное время, подтверждение и напоминание.', tags:['Telegram Bot','Calendar','UX'], tone:'paper' },
 ];
 
@@ -46,11 +46,11 @@ export default function Home() {
       <header className="section-head"><div><span>01 / Проекты в работе</span><h2>Не обещания.<br /><em>Рабочие прототипы.</em></h2></div><p>Три направления разработки: от действующего прототипа до концептов, которые постепенно станут полноценными кейсами.</p></header>
       <div className="project-tabs" role="tablist">{projects.map((p,i)=><button key={p.no} role="tab" aria-selected={active===i} className={active===i?'active':''} onClick={()=>setActive(i)}><span>{p.no}</span>{p.title}</button>)}</div>
       <article className={`project-stage ${projects[active].tone}`}>
-        <div className="project-info"><span>{projects[active].type}</span><h3>{projects[active].title}</h3><p>{projects[active].text}</p><div className="tags">{projects[active].tags.map(t=><i key={t}>{t}</i>)}</div>{active===0&&<a className="project-case-link" href="/projects/local-leads-scout">Открыть полный кейс →</a>}</div>
+        <div className="project-info"><span>{projects[active].type}</span><h3>{projects[active].title}</h3><p>{projects[active].text}</p><div className="tags">{projects[active].tags.map(t=><i key={t}>{t}</i>)}</div>{active===0&&<a className="project-case-link" href="/projects/local-leads-scout">Открыть полный кейс →</a>}{active===1&&<a className="project-case-link" href="/projects/telegram-game-bot">Открыть полный кейс →</a>}</div>
         <div className="project-demo" aria-hidden="true">
           <div className="demo-bar"><i/><i/><i/><b>{projects[active].no}.project</b></div>
           {active===0&&<div className="radar"><span className="ring r1"/><span className="ring r2"/><span className="ring r3"/><span className="sweep"/><i className="dot d1"/><i className="dot d2"/><i className="dot d3"/><strong>28</strong><small>групп найдено</small></div>}
-          {active===1&&<div className="chart"><div className="chart-stats"><span>Цена сейчас<strong>2 490 ₽</strong></span><span>Изменение<strong className="up">−12%</strong></span></div><div className="bars">{[34,48,42,66,54,79,62,88,72,95].map((h,i)=><i key={i} style={{height:`${h}%`}}/>)}</div></div>}
+          {active===1&&<div className="game-panel"><span>ТАБЛИЦА ЛИДЕРОВ</span><div><b>01</b><strong>Игрок</strong><i>профиль</i></div><div><b>02</b><strong>Аноним</strong><i>имя скрыто</i></div><div><b>03</b><strong>Игрок</strong><i>профиль</i></div><button>Получить ежедневный бонус</button></div>}
           {active===2&&<div className="booking"><span>Выберите время</span><div>{['10:00','11:30','13:00','15:30','17:00','18:30'].map((t,i)=><b className={i===3?'chosen':''} key={t}>{t}</b>)}</div><button>Записаться →</button></div>}
         </div>
       </article>
