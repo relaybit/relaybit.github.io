@@ -22,3 +22,27 @@ h1 em:after{display:none}
 .result,.result strong{color:#11120f!important}
 .result small,.result span{color:#4a5c1a!important}
 html[data-theme="dark"] .primary{background:var(--lime);color:#11120f}
+
+/* Clear client path and mobile navigation. */
+.site-header{border-bottom:1px solid var(--line)}
+.site-header .nav{width:100%;border-bottom:0}
+.mobile-menu{display:none;position:relative}
+.mobile-menu summary{list-style:none;cursor:pointer}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu>div{position:absolute;z-index:20;right:0;top:38px;min-width:180px;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:0 14px 35px rgba(0,0,0,.2)}
+.mobile-menu a{display:block;padding:12px;border-radius:4px}
+.mobile-menu a:hover{background:var(--lime);color:#11120f;opacity:1}
+.contact h2{line-height:1.02;margin-bottom:32px}
+.contact p{margin-top:0}
+
+@media(max-width:540px){
+  html,body{overflow-x:clip}
+  .hero,.section-head,.project-stage,.process{grid-template-columns:minmax(0,1fr)}
+  .hero>*{min-width:0}
+  h1{font-size:48px}
+  .nav-cta{display:none}
+  .mobile-menu{display:block;padding:11px 14px;border:1px solid var(--line);border-radius:999px}
+  .contact{padding:70px 32px}
+  .contact h2{font-size:48px;line-height:1;margin-bottom:28px}
+  .contact-orb{width:52px;height:52px;right:22px;top:22px}
+}

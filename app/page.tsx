@@ -4,7 +4,7 @@ import SiteHeader from './components/SiteHeader';
 import SiteFooter from './components/SiteFooter';
 
 const projects = [
-  { no:'01', type:'LIVE · TELEGRAM', title:'Local Leads Scout', text:'Находит небольшие тематические сообщества, оценивает размер и присылает лучшие варианты в Telegram.', tags:['Telethon','Python','SQLite'], tone:'acid' },
+  { no:'01', type:'В РАЗРАБОТКЕ · TELEGRAM', title:'Local Leads Scout', text:'Находит небольшие тематические сообщества, оценивает размер и присылает лучшие варианты в Telegram.', tags:['Telethon','Python','SQLite'], tone:'acid' },
   { no:'02', type:'LAB · DATA', title:'Price Pulse', text:'Собирает цены конкурентов, складывает историю в таблицу и сообщает о важных изменениях.', tags:['Parsing','Sheets API','Alerts'], tone:'dark' },
   { no:'03', type:'LAB · AUTOMATION', title:'Booking Flow', text:'Мини-бот для записи клиентов: услуги, свободное время, подтверждение и напоминание.', tags:['Telegram Bot','Calendar','UX'], tone:'paper' },
 ];
@@ -43,8 +43,8 @@ export default function Home() {
     </section>
     <div className="ticker"><div>TELEGRAM-БОТЫ <i>✦</i> ПАРСИНГ ДАННЫХ <i>✦</i> АВТОМАТИЗАЦИЯ <i>✦</i> GOOGLE SHEETS <i>✦</i> API ИНТЕГРАЦИИ <i>✦</i> TELEGRAM-БОТЫ <i>✦</i> ПАРСИНГ ДАННЫХ <i>✦</i></div></div>
     <section className="work shell" id="work">
-      <header className="section-head"><div><span>01 / Избранные работы</span><h2>Не обещания.<br /><em>Работающие системы.</em></h2></div><p>Небольшие продукты с ясной пользой. Каждый можно открыть, понять и запустить без длинных инструкций.</p></header>
-      <div className="project-tabs" role="tablist">{projects.map((p,i)=><button key={p.no} className={active===i?'active':''} onClick={()=>setActive(i)}><span>{p.no}</span>{p.title}</button>)}</div>
+      <header className="section-head"><div><span>01 / Проекты в работе</span><h2>Не обещания.<br /><em>Рабочие прототипы.</em></h2></div><p>Три направления разработки: от действующего прототипа до концептов, которые постепенно станут полноценными кейсами.</p></header>
+      <div className="project-tabs" role="tablist">{projects.map((p,i)=><button key={p.no} role="tab" aria-selected={active===i} className={active===i?'active':''} onClick={()=>setActive(i)}><span>{p.no}</span>{p.title}</button>)}</div>
       <article className={`project-stage ${projects[active].tone}`}>
         <div className="project-info"><span>{projects[active].type}</span><h3>{projects[active].title}</h3><p>{projects[active].text}</p><div className="tags">{projects[active].tags.map(t=><i key={t}>{t}</i>)}</div></div>
         <div className="project-demo" aria-hidden="true">
