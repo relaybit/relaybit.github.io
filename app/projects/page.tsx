@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';import SiteHeader from '../components/SiteHeader';import SiteFooter from '../components/SiteFooter';
-export const metadata:Metadata={title:'Проекты автоматизации — RELAYBIT',description:'Реальные проекты RELAYBIT: Telegram-боты, поиск лидов, парсинг данных и AI-автоматизация.',alternates:{canonical:'/projects'},openGraph:{images:[]},twitter:{images:[]}};
+export const metadata:Metadata={title:'Проекты автоматизации — RELAYBIT',description:'Реальные проекты RELAYBIT: Telegram-боты, поиск лидов, парсинг данных и AI-автоматизация.',alternates:{canonical:'/projects/'},openGraph:{url:'/projects/',images:['/og.png']},twitter:{card:'summary_large_image',images:['/og.png']}};
 const cases=[
   {no:'01',title:'Local Leads Scout',type:'Telegram / Python',text:'Поиск тематических сообществ, фильтрация, база результатов и уведомления по расписанию.',status:'Рабочий прототип',href:'/projects/local-leads-scout'},
   {no:'02',title:'Игровой Telegram-бот',type:'Telegram / Game mechanics',text:'Игровые режимы, внутренняя валюта, рейтинг, ежедневный бонус и настройка анонимности.',status:'Архивный прототип',href:'/projects/telegram-game-bot'},

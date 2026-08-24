@@ -5,9 +5,9 @@ import SiteFooter from '../../components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Lead Hunter v0.6.0 — кейс RELAYBIT',
   description: 'Windows-приложение для сбора, AI-оценки и доставки подходящих заявок из нескольких источников.',
-  alternates: { canonical: '/projects/lead-hunter' },
-  openGraph: { images: [] },
-  twitter: { images: [] },
+  alternates: { canonical: '/projects/lead-hunter/' },
+  openGraph: { url: '/projects/lead-hunter/', type: 'article', images: ['/lead-hunter-cover.png'] },
+  twitter: { card: 'summary_large_image', images: ['/lead-hunter-cover.png'] },
 };
 
 export default function LeadHunterPage() {
@@ -17,7 +17,7 @@ export default function LeadHunterPage() {
       <div className="case-kicker"><span>Кейс 03</span><b><i /> Готовая desktop-сборка</b></div>
       <h1>Lead Hunter<br/><em>v0.6.0.</em></h1>
       <p>Windows-приложение, которое собирает свежие заказы с нескольких площадок, отсеивает неподходящие, оценивает перспективность с помощью AI и доставляет лучшие заявки в Telegram.</p>
-      <div className="case-actions"><a className="button primary" href="https://t.me/leonid_relaybit" target="_blank" rel="noreferrer">Обсудить похожую систему <span>→</span></a><a className="button ghost" href="/projects">Все проекты</a></div>
+      <div className="case-actions"><a className="button primary" href="https://t.me/leonid_relaybit" target="_blank" rel="noreferrer">Обсудить похожую систему <span>→</span></a><a className="button ghost" href="/projects/">Все проекты</a></div>
     </section>
     <section className="case-metrics shell" aria-label="Показатели Lead Hunter"><article><small>За цикл</small><strong>62</strong><span>объявления из источников</span></article><article><small>В базе</small><strong>154</strong><span>уникальных лида</span></article><article><small>Одобрено AI</small><strong>10</strong><span>подходящих заявок</span></article><article><small>Доставлено</small><strong>5</strong><span>карточек в Telegram</span></article></section>
     <section className="case-story shell"><div className="case-story-title"><span>01 / Задача</span><h2>Не искать заказы.<br/><em>Получать лучшие.</em></h2></div><div className="case-copy"><p>На фриланс-площадках много нерелевантных, платных или слишком конкурентных объявлений. Ручная проверка каждой карточки съедает время ещё до начала работы.</p><p>Lead Hunter превращает этот поток в короткую персональную подборку и показывает её там, где удобно быстро принять решение — в Telegram.</p></div></section>

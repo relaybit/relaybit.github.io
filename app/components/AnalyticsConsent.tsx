@@ -26,7 +26,7 @@ export default function AnalyticsConsent() {
     setVisible(false);
   }
   if (!visible) return null;
-  return <aside className="analytics-consent" aria-label="Настройки аналитики"><p>Используем Google Analytics, чтобы понимать посещаемость сайта. Аналитика включится только с вашего согласия. <Link href="/privacy">Подробнее</Link></p><div><button type="button" onClick={() => choose('denied')}>Только необходимые</button><button type="button" className="accept" onClick={() => choose('granted')}>Разрешить аналитику</button></div></aside>;
+  return <aside className="analytics-consent" aria-label="Настройки аналитики"><p>Используем Google Analytics, чтобы понимать посещаемость сайта. Аналитика включится только с вашего согласия. <Link href="/privacy/">Подробнее</Link></p><div><button type="button" onClick={() => choose('denied')}>Только необходимые</button><button type="button" className="accept" onClick={() => choose('granted')}>Разрешить аналитику</button></div></aside>;
 }
 
 declare global {

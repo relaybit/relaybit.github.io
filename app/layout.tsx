@@ -4,7 +4,7 @@ import Script from 'next/script';
 import AnalyticsConsent from './components/AnalyticsConsent';
 import './globals.css';
 
-const siteUrl = process.env.SITE_URL || 'https://relaybit.gsvlona.chatgpt.site';
+const siteUrl = process.env.SITE_URL || 'https://relaybit.github.io';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     yandex: '856edd8f88a32774',
   },
   category: 'Разработка программного обеспечения',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
   openGraph: {
@@ -74,11 +82,20 @@ export default function RootLayout({
         `}</Script>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'WebSite',
+          '@type': 'ProfessionalService',
           name: 'RELAYBIT',
           url: siteUrl,
           description: 'Автоматизация бизнеса, Telegram-боты, парсеры и AI-инструменты.',
-          author: { '@type': 'Person', name: 'Гусев Леонид' },
+          image: `${siteUrl}/og.png`,
+          founder: { '@type': 'Person', name: 'Гусев Леонид' },
+          areaServed: ['Россия', 'Удалённо'],
+          serviceType: ['Разработка Telegram-ботов', 'Парсеры данных', 'Автоматизация бизнеса', 'Интеграция API'],
+          sameAs: [
+            'https://github.com/relaybit',
+            'https://github.com/FAYZER41',
+            'https://t.me/RelayBit',
+            'https://freelance.ru/RelayBit',
+          ],
         })}} />
         {children}
         <AnalyticsConsent />
