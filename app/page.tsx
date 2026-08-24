@@ -6,7 +6,7 @@ import SiteFooter from './components/SiteFooter';
 const projects = [
   { no:'01', type:'В РАЗРАБОТКЕ · TELEGRAM', title:'Local Leads Scout', text:'Находит небольшие тематические сообщества, оценивает размер и присылает лучшие варианты в Telegram.', tags:['Telethon','Python','SQLite'], tone:'acid' },
   { no:'02', type:'АРХИВ · TELEGRAM', title:'Игровой Telegram-бот', text:'Объединяет мини-игры, внутреннюю валюту, рейтинг, ежедневные бонусы и настройки приватности.', tags:['Python','Telegram Bot','Game UX'], tone:'dark' },
-  { no:'03', type:'DESKTOP · AI', title:'Lead Hunter', text:'Собирает заявки с трёх площадок, фильтрует поток, оценивает лиды с помощью AI и отправляет лучшие в Telegram.', tags:['Python','AI scoring','SQLite'], tone:'paper' },
+  { no:'03', type:'DESKTOP · AI', title:'Lead Hunter', text:'Собирает заявки с пяти источников, фильтрует поток, оценивает лиды с помощью AI и отправляет лучшие в Telegram.', tags:['Python','AI scoring','SQLite'], tone:'paper' },
 ];
 
 export default function Home() {
