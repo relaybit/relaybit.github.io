@@ -51,7 +51,7 @@ export default function Home() {
           <div className="demo-bar"><i/><i/><i/><b>{projects[active].no}.project</b></div>
           {active===0&&<div className="radar"><span className="ring r1"/><span className="ring r2"/><span className="ring r3"/><span className="sweep"/><i className="dot d1"/><i className="dot d2"/><i className="dot d3"/><strong>28</strong><small>групп найдено</small></div>}
           {active===1&&<div className="game-panel"><span>ТАБЛИЦА ЛИДЕРОВ</span><div><b>01</b><strong>Игрок</strong><i>профиль</i></div><div><b>02</b><strong>Аноним</strong><i>имя скрыто</i></div><div><b>03</b><strong>Игрок</strong><i>профиль</i></div><button>Получить ежедневный бонус</button></div>}
-          {active===2&&<div className="hunter-panel"><span>LEAD HUNTER · ONLINE</span><div className="hunter-metrics"><b>154<small>в базе</small></b><b>10<small>одобрено AI</small></b><b>5<small>отправлено</small></b></div><ol><li><i>85</i><strong>Telegram-бот для проекта</strong><span>TAKE</span></li><li><i>85</i><strong>Дашборд аналитики</strong><span>TAKE</span></li><li><i>85</i><strong>Парсер цен</strong><span>TAKE</span></li></ol></div>}
+          {active===2&&<div className="hunter-panel"><span>LEAD HUNTER · ONLINE</span><div className="hunter-metrics"><b>848<small>в базе</small></b><b>42<small>одобрено AI</small></b><b>37<small>отправлено</small></b></div><ol><li><i>79</i><strong>новых объявлений за 24 часа</strong><span>FILTERED</span></li><li><i>42</i><strong>кандидата прошли строгий отбор</strong><span>TAKE</span></li><li><i>37</i><strong>карточек доставлено в Telegram</strong><span>SENT</span></li></ol></div>}
         </div>
       </article>
     </section>
