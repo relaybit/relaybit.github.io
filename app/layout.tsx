@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
 import AnalyticsConsent from './components/AnalyticsConsent';
+import AnalyticsEvents from './components/AnalyticsEvents';
 import './globals.css';
 
 const siteUrl = process.env.SITE_URL || 'https://relaybit.github.io';
@@ -98,6 +99,7 @@ export default function RootLayout({
           ],
         })}} />
         {children}
+        <AnalyticsEvents />
         <AnalyticsConsent />
       </body>
     </html>
